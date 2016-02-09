@@ -1,0 +1,21 @@
+import bottle
+
+@bottle.route('/')
+def home_page():
+	return "Hello World\n"
+
+@bottle.route('/testpage')
+def test_page():
+	return "this is a test page"
+
+@bottle.route('/ankita')
+def ankita():
+        return "hello, ankita"
+
+@bottle.route('/testpage/ankita')
+def test_ankita():
+        return "hello ankita, welcome to the test page"
+
+bottle.debug(True)
+bottle.run(host='localhost', port=8080)
+
